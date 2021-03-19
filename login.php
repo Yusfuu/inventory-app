@@ -20,7 +20,6 @@ if (isset($_SESSION['login'])) {
 
   <div class="container">
     <div class="wrapper">
-      <h1>SMANGER</h1>
       <div class="form">
         <h2>Connect</h2>
         <div class="inp">
