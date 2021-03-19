@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+}
+
+.wrapper .form .inp input, .wrapper .form button {
+  border: none;
+  outline: none;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #e9e9e9;
+}
+
+.container {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrapper {
+  -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+          box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  text-align: center;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: #fff;
+  position: relative;
+  max-width: 600px;
+}
+
+.wrapper .form {
+  padding: 16px;
+}
+
+.wrapper .form .inp {
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.wrapper .form .inp label {
+  display: block;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.wrapper .form .inp input {
+  width: 100%;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  font-size: 20px;
+  padding: 8px 16px;
+  color: #1e1e1e;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.wrapper .form .inp input:focus {
+  border-color: #007af5;
+}
+
+.wrapper .form button {
+  background-color: #0061ff;
+  color: #fff;
+  width: 85%;
+  border-radius: 12px;
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+  padding: 6px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.wrapper .action {
+  width: 70%;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=style.css.map */

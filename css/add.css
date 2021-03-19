@@ -1,0 +1,507 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+:root {
+  font-size: 16px;
+  background-color: #e9e9e9;
+  font-family: "Open Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input,
+textarea,
+button {
+  outline: none;
+}
+
+.navbar {
+  z-index: 99;
+  width: 13rem;
+  height: 100vh;
+  position: fixed;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+          box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  padding: 1rem 0;
+}
+
+.navbar .logo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.navbar .logo img {
+  width: 10rem;
+}
+
+.navbar .logo #logo-res {
+  display: none;
+}
+
+.navbar .profile-image {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.navbar .profile-image > :first-child {
+  width: 6rem;
+  border-radius: 50px;
+}
+
+.navbar .profile-image > :nth-child(2) {
+  font-size: 0.8rem;
+}
+
+.navbar .profile-image > :last-child {
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+.navbar .link-item {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar .link-item .link {
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: #1e1e1e;
+}
+
+.navbar .link-item .link img {
+  width: 1.7rem;
+  margin: 0 1.5rem;
+}
+
+.navbar .link-item .bottme-nav {
+  margin-top: auto;
+}
+
+input,
+textarea {
+  font-size: 16px;
+  padding: 6px 0px;
+}
+
+main {
+  background-color: #e9e9e9;
+  margin-left: 13rem;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  width: calc(100% - 13rem);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: ([start-col] minmax(350px, 40vw) [end-col])[2];
+      grid-template-columns: repeat(2, [start-col] minmax(350px, 40vw) [end-col]);
+  -ms-grid-rows: ([start-header] 65px [end-header])[3] [textarea-start] 350px [textarea-end] ([start-btn] 65px [end-btn])[3];
+      grid-template-rows: repeat(3, [start-header] 65px [end-header]) [textarea-start] 350px [textarea-end] repeat(3, [start-btn] 65px [end-btn]);
+  grid-gap: 25px;
+}
+
+main h1 {
+  grid-column: start-col 1 / end-col 2;
+}
+
+main label {
+  display: block;
+}
+
+main > :nth-child(2) input, main > :nth-child(3) textarea, main .drop-zone {
+  width: 100%;
+}
+
+main > :nth-child(2) {
+  grid-row: start-header 3 / end-header 3;
+  grid-column: start-col 1 / end-col 1;
+}
+
+main > :nth-child(2) input {
+  padding: 8px 0px;
+}
+
+main > :nth-child(3) {
+  grid-row: textarea-start / textarea-end;
+  grid-column: start-col 1 / end-col 1;
+}
+
+main > :nth-child(3) textarea {
+  height: calc(100% - 22px);
+}
+
+main > :nth-child(4) {
+  grid-column: start-col 2 / end-col 2;
+  grid-row: start-header 3 /-4;
+}
+
+main > :nth-child(5) {
+  grid-column: start-col 1 / end-col 1;
+  grid-row: start-btn 1 / end-btn 1;
+}
+
+main > :nth-child(6) {
+  grid-column: start-col 1 / end-col 1;
+  grid-row: start-btn 2 / end-btn 2;
+}
+
+main > :nth-child(7) {
+  grid-column: start-col 2 / end-col 2;
+  grid-row: start-btn 3 / end-btn 3;
+  place-self: center flex-end;
+}
+
+main > :nth-child(7) button {
+  color: white;
+  background-color: #2b2af2;
+  font-size: 16px;
+  text-align: center;
+  padding: 8px 50px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+main .drop-zone {
+  padding: 100px 20px;
+  position: relative;
+  background-color: #c8dadf;
+  outline: 2px dashed #92b0b3;
+  outline-offset: -10px;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+}
+
+main .drop-zone svg {
+  width: 100%;
+  height: 60px;
+  fill: #92b0b3;
+  display: block;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+main .drop-zone span {
+  display: block;
+  text-align: center;
+}
+
+main .drop-zone span strong {
+  color: #0f3c4b;
+}
+
+main .drop-zone input {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+main .drop-zone img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  visibility: hidden;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+main .drop-zone-file_dragover {
+  outline-offset: -20px;
+  outline-color: #c8dadf;
+  background-color: #fff;
+}
+
+main .drop-zone-file_drop {
+  background-color: #c8dadf;
+  outline: 2px dashed #92b0b3;
+  outline-offset: -10px;
+}
+
+@media only screen and (max-width: 1000px) {
+  main {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 4rem;
+    -ms-grid-columns: [start-col] minmax(300px, 40vw) [end-col] !important;
+        grid-template-columns: [start-col] minmax(300px, 40vw) [end-col] !important;
+    -ms-grid-rows: ([start-header] 65px [end-header])[2] [textarea-start] 350px [textarea-end] ([start-btn] 65px [end-btn])[2] 150px 65px;
+        grid-template-rows: repeat(2, [start-header] 65px [end-header]) [textarea-start] 350px [textarea-end] repeat(2, [start-btn] 65px [end-btn]) 150px 65px;
+    grid-gap: 25px;
+  }
+  main h1 {
+    grid-column: start-col 1 / end-col 1;
+  }
+  main > :nth-child(2) {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+    grid-column: start-col 1 / end-col 1;
+  }
+  main > :nth-child(3) {
+    grid-row: 3 / span;
+    grid-column: start-col 1 / end-col 1;
+  }
+  main > :nth-child(4) {
+    grid-row: 6 / 2 span;
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 1;
+    grid-row: 7 / 8;
+  }
+  main > :nth-child(5) {
+    grid-column: start-col 1 / end-col 1;
+    grid-row: start-btn 1 / end-btn 1;
+  }
+  main > :nth-child(6) {
+    grid-column: start-col 1 / end-col 1;
+    grid-row: start-btn 2 / end-btn 2;
+  }
+  main > :nth-child(7) {
+    grid-column: 1 / -1;
+    grid-row: start-btn 3 / end-btn 3;
+    place-self: center;
+  }
+  main .drop-zone {
+    grid-row: 6 / 2 span;
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 1;
+    grid-row: 6 / 8;
+    grid-column: 1 / -1;
+    padding: 0;
+  }
+  .navbar {
+    height: 100%;
+    width: 5rem;
+  }
+  .navbar .profile-image p {
+    display: none;
+  }
+  .navbar .profile-image img {
+    width: 3rem !important;
+  }
+  .link span {
+    display: none;
+  }
+  .navbar .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .navbar .logo #logo-res {
+    display: block;
+    width: 3rem;
+  }
+  .navbar .logo #logo {
+    display: none;
+  }
+}
+
+main .drop-zone img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#cancel {
+  margin-right: 45px;
+  border: 2px solid #2b2af2;
+  color: #2b2af2;
+  background: transparent;
+}
+
+.navbar {
+  z-index: 99;
+  width: 13rem;
+  height: 100vh;
+  position: fixed;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+          box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  padding: 1rem 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar {
+    width: 60px;
+    height: 100%;
+  }
+}
+
+.navbar .logo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.navbar .logo img {
+  width: 10rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar .logo {
+    width: 100%;
+  }
+  .navbar .logo img {
+    width: 90%;
+    height: 100%;
+  }
+}
+
+.navbar .mLogo {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar .dlogo {
+    display: none;
+  }
+  .navbar .mLogo {
+    display: inline;
+  }
+}
+
+.navbar .profile-image {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.navbar .profile-image > :first-child {
+  width: 6rem;
+  border-radius: 50px;
+}
+
+.navbar .profile-image > :nth-child(2) {
+  font-size: 0.8rem;
+}
+
+.navbar .profile-image > :last-child {
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar .profile-image p {
+    display: none;
+  }
+  .navbar .profile-image img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.navbar .link-item {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar .link-item .link {
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: #1e1e1e;
+}
+
+.navbar .link-item .link img {
+  width: 1.7rem;
+  margin: 0 1.5rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar .link-item .link span {
+    display: none;
+  }
+  .navbar .link-item .link img {
+    width: 30px;
+  }
+}
+
+.navbar .link-item .bottme-nav {
+  margin-top: auto;
+}
+/*# sourceMappingURL=add.css.map */
