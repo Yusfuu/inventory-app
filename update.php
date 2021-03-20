@@ -32,7 +32,7 @@
     </div>
 
     <div class="link-item">
-      <a href="index.php" class="link">
+      <a href="dash.php" class="link">
         <img src="icon/icon-dash.svg" alt="icon" />
         <span>Dashboard</span>
       </a>
